@@ -1,0 +1,173 @@
+/* First section */
+.container {
+  display: grid;
+  grid-template-rows: 300px 100px;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 0.5rem;
+  justify-content: center;
+}
+
+.item-1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
+}
+
+.item-2 {
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Second section */
+.section-padding {
+  padding: 50px 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.flex-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.flex-container h5 {
+  margin: 10px 0;
+}
+
+.flex-container button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.flex-container button:hover {
+  background-color: lightblue;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .item-1 {
+    grid-row: auto;
+    grid-column: span 2;
+  }
+
+  .item-2 {
+    grid-row: auto;
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .item-1,
+  .item-2 {
+    grid-row: auto;
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flex-container > div {
+    width: 120px;
+    margin: 8px;
+    padding: 8px;
+  }
+
+  .flex-container button {
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex-container > div {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .flex-container button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Third section */
+.third {
+  padding: 50px 300px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-container {
+  display: block;
+  margin: 0 auto;
+}
+
+.product-container .item {
+  display: inline-block;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.product-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.price {
+  color: blue;
+  margin: 10px 0;
+}
+.product-container p {
+  margin: 10px 0;
+}
+@media screen and (max-width: 1000px) {
+  .third {
+    padding: 50px 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .third {
+    padding: 50px 20px;
+  }
+}
